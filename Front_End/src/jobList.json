@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "position": "Bookstore Manager",
+        "location": "Reading City, RC",
+        "description": "Manage day-to-day operations of the bookstore, including inventory management, customer service, and staff supervision.",
+        "requirements": "Previous experience in retail management, strong organizational skills, and a passion for books.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 2,
+        "position": "Bookstore Clerk",
+        "location": "Reading City, RC",
+        "description": "Assist customers in finding books, processing transactions, and maintaining store cleanliness and organization.",
+        "requirements": "Friendly demeanor, strong communication skills, and ability to work in a team environment.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 3,
+        "position": "Customer Service Representative",
+        "location": "Remote",
+        "description": "Handle customer inquiries via phone, email, and in-person regarding book orders, shipments, and general inquiries.",
+        "requirements": "Excellent communication skills, patience, and a passion for providing exceptional customer service.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 4,
+        "position": "Content Writer",
+        "location": "Remote",
+        "description": "Create engaging content for the bookstore's blog, social media channels, and marketing materials, focusing on book reviews, author interviews, and literary news.",
+        "requirements": "Strong writing skills, knowledge of SEO best practices, and a passion for literature.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 5,
+        "position": "Digital Marketing Specialist",
+        "location": "Remote",
+        "description": "Develop and execute digital marketing campaigns to promote bookstore events, book launches, and special promotions across various online channels.",
+        "requirements": "Experience in digital marketing, proficiency in social media platforms and analytics tools, and a creative approach to campaign planning.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 6,
+        "position": "Graphic Designer",
+        "location": "Remote",
+        "description": "Design visually appealing graphics for the bookstore's website, social media platforms, email newsletters, and promotional materials.",
+        "requirements": "Proficiency in graphic design software (e.g., Adobe Creative Suite), a strong portfolio demonstrating creative and technical skills, and attention to detail.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 7,
+        "position": "Book Editor",
+        "location": "Remote",
+        "description": "Edit manuscripts for grammar, style, and consistency, working closely with authors and publishing teams to ensure high-quality book publications.",
+        "requirements": "Proven editing experience, excellent command of the English language, and a passion for literature and storytelling.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 8,
+        "position": "Sales Associate",
+        "location": "Reading City, RC",
+        "description": "Assist customers in finding books, recommending titles, processing transactions, and maintaining store displays.",
+        "requirements": "Customer service experience, knowledge of book genres, and a friendly, approachable demeanor.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 9,
+        "position": "Warehouse Manager",
+        "location": "Reading City, RC",
+        "description": "Oversee warehouse operations, including receiving shipments, inventory management, and fulfillment of online orders.",
+        "requirements": "Prior experience in warehouse management, strong organizational skills, and attention to detail.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 10,
+        "position": "Bookkeeper",
+        "location": "Remote",
+        "description": "Manage financial records, process payments, reconcile accounts, and prepare financial reports for the bookstore.",
+        "requirements": "Accounting or bookkeeping experience, proficiency in accounting software (e.g., QuickBooks), and attention to detail.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 11,
+        "position": "Event Coordinator",
+        "location": "Remote",
+        "description": "Plan and execute bookstore events, author signings, book clubs, and virtual events, ensuring a memorable experience for attendees.",
+        "requirements": "Event planning experience, strong organizational skills, and creativity in event concept development.",
+        "posted": "2024-07-07"
+    },
+    {
+        "id": 12,
+        "position": "IT Support Specialist",
+        "location": "Remote",
+        "description": "Provide technical support and troubleshooting assistance for bookstore staff, including hardware, software, and network issues.",
+        "requirements": "Technical support experience, knowledge of IT systems and troubleshooting methodologies, and strong problem-solving skills.",
+        "posted": "2024-07-07"
+    }
+]

@@ -1,0 +1,119 @@
+[
+    {
+        "id" : 1,
+        "name":"Story Book",
+        "title":"Panchatantra",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 2,
+        "name":"Recipe Book",
+        "title":"Ghar ke Nuskhe",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 3,
+        "name":"Comics",
+        "title":"Chacha Chaudhary",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 4,
+        "name":"Non Fiction",
+        "title":"The Diary of a Young Girl",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 5,
+        "name":"Horror",
+        "title":"Tender is the Flesh",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 6,
+        "name":"Romance",
+        "title":"Pride and Prejudice",
+        "price": 0,
+        "category":"Free",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 7,
+        "name":"Biography",
+        "title":"Bruce Lee : A Life",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 8,
+        "name":"Classics",
+        "title":"The Time Machine",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 9,
+        "name":"Thriller",
+        "title":"Shutter Island",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 10,
+        "name":"Religious Texts",
+        "title":"The Bhagwat Gita",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 11,
+        "name":"Science Fiction",
+        "title":"Day Zero",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 12,
+        "name":"Mystery",
+        "title":"Sherlock Holmes",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    },
+
+    {
+        "id" : 13,
+        "name":"Fantasy",
+        "title":"The Wind on the Haunted Hill",
+        "price": 99,
+        "category":"Priced",
+        "image":"https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg?t=st=1719983990~exp=1719987590~hmac=b809811fc07521d1fb02fa2b4923ee82aeefc8733fd219ee7afec52bda8166e2&w=740"
+    }
+
+]
