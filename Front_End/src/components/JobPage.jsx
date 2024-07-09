@@ -1,24 +1,38 @@
-import React, { useState } from 'react';
-import JobCard from './JobCard'; // Import your JobCard component
-import jobList from "../../src/jobList.json"; // Replace with the path to your joblist JSON file
+import React, { useState, useEffect } from 'react';
+import JobCard from './JobCard';
+import axios from "axios";
 import { Link } from "react-router-dom";
 
 function JobPage() {
+  const [jobs, setJob] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const getJob = async () => {
+      try {
+        const rest = await axios.get("http://localhost:4001/job"); // Adjust URL if necessary
+        console.log(rest.data);
+        setJob(rest.data);
+      } catch (error) {
+        console.log("Error fetching jobs:", error);
+      }
+    };
+    getJob();
+  }, []);
 
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
 
-  // Filtering jobList based on searchQuery
-  const filteredJobs = jobList.filter((job) =>
+  // Filtering jobs based on searchQuery
+  const filteredJobs = jobs.filter((job) =>
     job.position.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
     <div className="dark:bg-slate-900 dark:text-white min-h-screen">
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-        <div className="mt-28 items-center justify-center text-center">
+        <div className="mt-16 md:mt-19 items-center justify-center text-center">
           <h1 className="text-2xl md:text-4xl">
             Explore Our Job Openings
             <span className="text-pink-500"> Here :)</span>
@@ -57,8 +71,8 @@ function JobPage() {
 
         <div className="mt-6">
           <Link to="/">
-            <button className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 duration-300">
-              Back
+            <button className="justify-center bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">
+              Back to Home
             </button>
           </Link>
         </div>

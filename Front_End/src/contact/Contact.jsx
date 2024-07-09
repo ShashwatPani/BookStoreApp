@@ -17,7 +17,7 @@ function Contact() {
       <Navbar />
       <div className="dark:bg-slate-900 dark:text-white min-h-screen">
         <div className="max-w-screen-2xl container mx-auto md:px-20 px-4">
-          <div className="mt-28 items-center justify-center text-center">
+          <div className="mt-16 md:mt-19 items-center justify-center text-center">
             <h1 className="text-2xl md:text-4xl font-bold mb-4">Contact Us</h1>
             <p className="mt-12 dark:bg-slate-900 dark:text-white text-lg leading-relaxed">
               If you have any complaints, you can reach out to us by filling the form below.
@@ -88,7 +88,7 @@ function Contact() {
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="text-pink-500"> YouTube</a>
             </p>
             <Link to="/">
-              <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 duration-300">
+              <button className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300">
                 Back to Home
               </button>
             </Link>

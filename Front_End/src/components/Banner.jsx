@@ -12,29 +12,15 @@ function Banner() {
               <span className="text-pink-500"> new everyday!!!!</span>
             </h1>
             <p className="text-xl">
-              We are excited to welcome everyone old and new equally to our happy working place. Hope we can serve you to the fullest of our extent...
+              We are excited to welcome everyone old and new equally to our happy working place. Hope we can serve you to the fullest of our extent. Our team is dedicated to providing exceptional service and support to ensure your experience with us is nothing short of extraordinary. We value each and every one of our customers and are committed to building lasting relationships based on trust and satisfaction. Serving our customers is our utmost priority. We as a group take pride in providing our customers with the best possible service.
             </p>
-            <label className="input input-bordered flex items-center gap-2 dark:bg-slate-900 dark:text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="h-4 w-4 dark:bg-slate-900 dark:text-white"
-              >
-                <path
-                  d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
-                />
-                <path
-                  d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
-                />
-              </svg>
-              <input type="text" className="grow dark:bg-slate-900 dark:text-white" placeholder="Email" />
-            </label>
-            <button className="btn mt-6 btn-secondary dark:bg-slate-900 dark:text-white">Secondary</button>
+            <p className="mt-4 text-lg">
+              Join us today and start your journey towards learning and growth!
+            </p>
           </div>
         </div>
-        <div className="order-1 w-full md:w-1/2">
-          <img src={BannerImg} className="w-full h-auto dark:bg-slate-900" alt="Banner" />
+        <div className="dark:bg-slate-900 order-1 w-full md:w-1/2 relative">
+          <img src={BannerImg} className="w-full h-auto" alt="Banner" />
         </div>
       </div>
     </div>

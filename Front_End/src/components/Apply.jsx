@@ -54,24 +54,41 @@ function Apply() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    setSubmitted(true);
-    // Implement your form submission logic here (e.g., API call)
-  };
+  const onSubmit = async (data) => {
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('primaryEducation', data.primaryEducation);
+    formData.append('secondaryEducation', data.secondaryEducation);
+    formData.append('college', data.college);
+    formData.append('gender', data.gender);
+    formData.append('ethnicity', data.ethnicity);
+    formData.append('workedWithUs', data.workedWithUs);
+    formData.append('referral', data.referral);
+    formData.append('resume', data.resume[0]); // Assuming data.resume is a FileList
 
-  const handleChange = (e) => {
-    const { id, value, files } = e.target;
-    // Update formData state
+    try {
+      // Replace with your actual API endpoint
+      const response = await fetch('http://localhost:4000/job/apply', {
+        method: 'POST',
+        body: formData
+      });
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      // Handle error state or display error message
+    }
   };
 
   return (
     <>
       <Navbar />
-      <div className="container mx-auto p-4 mt-20">
+      <div className="container mx-auto p-4 mt-16 md:mt-19">
         <h1 className="text-2xl font-bold mb-4">Job Application Form</h1>
         {submitted ? (
           <div className="text-center p-4 bg-green-100 border-t border-b border-green-500 text-green-700">
@@ -88,35 +105,32 @@ function Apply() {
                 type="text"
                 id="name"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('name', { required: 'Name is required' })}
               />
               {errors.name && <span className="text-red-500">{errors.name.message}</span>}
             </div>
             <div className="max-w-[75%]">
               <label className="block text-sm font-medium" htmlFor="primaryEducation">
-                Primary Education (10th)
+                Primary Education
                 {errors.primaryEducation && <span className="text-red-500"> *</span>}
               </label>
               <input
                 type="text"
                 id="primaryEducation"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.primaryEducation ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('primaryEducation', { required: 'Primary Education is required' })}
               />
               {errors.primaryEducation && <span className="text-red-500">{errors.primaryEducation.message}</span>}
             </div>
             <div className="max-w-[75%]">
               <label className="block text-sm font-medium" htmlFor="secondaryEducation">
-                Secondary Education (12th)
+                Secondary Education
                 {errors.secondaryEducation && <span className="text-red-500"> *</span>}
               </label>
               <input
                 type="text"
                 id="secondaryEducation"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.secondaryEducation ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('secondaryEducation', { required: 'Secondary Education is required' })}
               />
               {errors.secondaryEducation && <span className="text-red-500">{errors.secondaryEducation.message}</span>}
@@ -129,7 +143,6 @@ function Apply() {
               <select
                 id="college"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.college ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('college', { required: 'College is required' })}
               >
                 <option value="">Select College</option>
@@ -147,7 +160,6 @@ function Apply() {
               <select
                 id="gender"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.gender ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('gender', { required: 'Gender is required' })}
               >
                 <option value="">Select Gender</option>
@@ -166,7 +178,6 @@ function Apply() {
               <select
                 id="ethnicity"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.ethnicity ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('ethnicity', { required: 'Ethnicity is required' })}
               >
                 <option value="">Select Ethnicity</option>
@@ -184,7 +195,6 @@ function Apply() {
               <select
                 id="workedWithUs"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.workedWithUs ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('workedWithUs', { required: 'This field is required' })}
               >
                 <option value="">Select</option>
@@ -201,20 +211,19 @@ function Apply() {
                 type="text"
                 id="referral"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.referral ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
                 {...register('referral')}
               />
             </div>
             <div className="max-w-[75%]">
               <label className="block text-sm font-medium" htmlFor="resume">
                 Attach Resume
+                {errors.resume && <span className="text-red-500"> *</span>}
               </label>
               <input
                 type="file"
                 id="resume"
                 className={`mt-1 block w-full border rounded-md p-2 ${errors.resume ? 'border-red-500' : 'border-gray-300'}`}
-                onChange={handleChange}
-                {...register('resume')}
+                {...register('resume', { required: 'Resume is required' })}
               />
               {errors.resume && <span className="text-red-500">{errors.resume.message}</span>}
             </div>

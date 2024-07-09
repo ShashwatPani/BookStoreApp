@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Login from "../../src/components/Login";
+import { SunIcon, MoonIcon } from '@heroicons/react/solid';
+import { useAuth } from '../context/AuthProvider';
+import Logout from '../../src/components/Logout';
 
 function Navbar() {
+  const [authUser, setAuthUser] = useAuth();
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light");
   const element = document.documentElement;
   const location = useLocation();
@@ -56,12 +60,20 @@ function Navbar() {
     </li>,
     <li key="jobs">
       <Link to="/jobs">Jobs</Link>
-    </li>
+    </li>,
+    <li key="theme-toggle">
+      <button
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        className="focus:outline-none"
+      >
+        {theme === "dark" ? <SunIcon className="h-5 w-5 text-yellow-500" /> : <MoonIcon className="h-5 w-5 text-gray-900" />}
+      </button>
+    </li>,
   ];
 
   return (
-    <div className={`max-w-screen-2xl container mx-auto md:px-20 px-4 fixed top-0 left-0 right-0 z-50 ${sticky ? 'sticky-navbar shadow-md bg-base-200 dark:bg-slate-600 dark:text-white' : 'dark:bg-slate-900 dark:text-white'}`}>
-      <div className={`navbar ${sticky ? 'shadow-md' : ''}`}>
+    <div className={`w-full fixed top-0 left-0 right-0 z-50 ${sticky ? 'shadow-md bg-base-200 dark:bg-slate-600 dark:text-white' : 'dark:bg-slate-900 dark:text-white'}`}>
+      <div className={`navbar max-w-screen-2xl mx-auto md:px-20 px-4`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -79,7 +91,9 @@ function Navbar() {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{navItems}</ul>
           </div>
-          <div>
+          {
+            authUser?<Logout/>:
+            <div>
             <a
               className="bg-pink-500 text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
               onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -88,6 +102,7 @@ function Navbar() {
             </a>
             <Login />
           </div>
+          }
         </div>
       </div>
     </div>
